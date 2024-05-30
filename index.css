@@ -1,110 +1,124 @@
-html, body{
+html, body {
     margin: 0;
     padding: 0;
-    min-width: 187px;
-    background-color: rgb(146, 203, 218)
+    min-width: 266px;
+    background-color: rgb(146, 203, 218);
 }
 
-.header{
+.header-wrapper {
+    padding-bottom: 35px;
+}
+
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: fixed;
-    top:0;
-    background-color: rgb(146, 203, 218)
+    top: 0;
+    width: 100%;
+    background-color: rgb(146, 203, 218);
+    box-shadow: 0 0 5px black;
 }
 
-.header-items h2{
+.header-items {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    padding: 5px;
+    width: 100%;
+    background-image: url(./public/images/header-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.header-items h2 {
     margin: 0;
     font-family: "Lobster", sans-serif;
     font-size: 1.8rem;
     color: rgb(11, 33, 196);
-    box-shadow: 0 0 5px;
-    padding: 0 0 5px 0;
+    padding-bottom: 5px;
     font-style: italic;
-    text-shadow: 0 0 4px whitesmoke ;
+    text-shadow: 0 0 4px whitesmoke;
 }
 
-.header-items{
-    background-image: url(./public/images/header-bg.png);
-    background-size: cover;
-    background-position: center;
-    padding: 10px 0;
-}
-
-.logo{
+.logo {
     width: 35%;
     min-width: 100px;
+    max-width: 170px;
 }
 
-.container{
-    margin-top: 160px;
-}
-
-.header-wrapper{
+.container {
+    margin-top: 40%;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .cards-container {
     padding: 10px;
-    background: linear-gradient(to bottom, rgb(146, 203, 218), #4682B4, rgb(146, 203, 218) );
+    background: linear-gradient(to bottom, rgb(146, 203, 218), #4682B4, rgb(146, 203, 218));
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card{
+.card {
     background-color: rgba(0, 0, 0, 0.351);
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgb(61, 61, 61);
+    box-shadow: 0 0 10px rgb(61, 61, 61);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 5px;
+    max-width: 400px;
 }
 
-.cards-img{
+.cards-img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 5px;
 }
 
-.card-text-location{
+.card-text-location {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0;
+    margin-bottom: 10px;
 }
 
-.card-text-location h2{
+.card-text-location h2 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     margin: 0 6px 0 0;
     text-shadow: 0 0 2px white;
 }
 
-.card-text-location a{
+.card-text-location a {
     font-size: 15px;
     text-decoration: none;
-    color: lightgray;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
     color: lightgrey;
+    cursor: pointer;
     padding-right: 3px;
+    transition: color 0.2s ease-in-out;
 }
 
-.card-text-location a:hover{
-    color: whitesmoke;
-    border-bottom: 1px solid black;
+.card-text-location a:hover {
+    color: rgb(194, 122, 54);
+    font-weight: bold;
 }
 
-.card-text-location img{
-    width: 5%;
+.card-text-location img {
+    width: 20px;
     margin-right: 5px;
 }
 
-.date-n-description{
+.date-n-description {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -113,25 +127,82 @@ html, body{
     gap: 5px;
 }
 
-.date-n-description h4, p{
+.date-n-description h4,
+.date-n-description p {
     margin: 0;
 }
 
-.date-n-description h4{
+.date-n-description h4 {
     text-decoration: underline;
-}
-.date-n-description p{
-    padding: 5px 10px;
-    font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  color: whitesmoke;
+    font-size: 1.2rem;
 }
 
-.date-n-description span{
+.date-n-description p {
+    padding: 5px 10px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: whitesmoke;
+}
+
+.date-n-description span {
     color: rgb(194, 194, 196);
 }
 
-@media screen and (min-width=440px) {
-    
+.description {
+    height: 10rem;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.description p {
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+}
+
+.description::-webkit-scrollbar {
+    display: none;
+}
+
+.title-control {
+    height: 35px;
+    overflow-x: auto;
+}
+
+@media screen and (min-width: 470px) {
+    .header-wrapper {
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card {
+        height: auto;
+        display: block;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 170px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards-container {
+        margin-top: 40px;
+    }
+
+    .card-text-location a {
+        font-size: 1.2rem;
+    }
+
+    .header-items h2 {
+        font-size: 3rem;
+    }
 }
