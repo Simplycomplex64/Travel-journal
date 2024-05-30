@@ -4,9 +4,9 @@ export default function Cards(props) {
     return (
             <div className="cards-container">
                 <div className="card">
-                <img className="cards-img" src={`../public/images/${props.item.imageUrl}`} alt="" />
+                <img className="cards-img" src={`../public/${props.item.imageUrl}`} alt="" />
                 <div className="card-text-location">
-                    <img src="../public/images/location-tag.png" alt="location tag" />
+                    <img src="../public/location-tag.png" alt="location tag" />
                     <div className="title-control">
                         <h2>{props.item.title}</h2>
                     </div>
