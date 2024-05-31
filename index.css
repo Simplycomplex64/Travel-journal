@@ -28,10 +28,10 @@ html, body {
     justify-content: flex-start;
     padding: 5px;
     width: 100%;
-    background-image: url(../public/header-bg.png);
-    background-size: cover;
+    background-image: url(header-bg.png);
     background-position: center;
 }
+
 
 .header-items h2 {
     margin: 0;
