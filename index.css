@@ -28,7 +28,7 @@ html, body {
     justify-content: flex-start;
     padding: 5px;
     width: 100%;
-    background-image: url(../public/header-bg.png); /* Corrected path */
+    background-image: url(../public/images/header-bg.png);
     background-size: cover;
     background-position: center;
 }
